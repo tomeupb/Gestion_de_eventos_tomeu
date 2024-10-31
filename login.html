@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, rgb(108, 189, 239), rgb(15, 149, 211));
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            text-align: center;
+            padding: 20px 25px;
+            box-shadow: 0 2px 8px rgb(34, 64, 90);
+        }
+
+        form .titulo {
+            color: black;
+            font-size: 35px;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        form label {
+            margin-bottom: 35px;
+        }
+
+        form label .fa-solid {
+            font-size: 20px; 
+            color: rgb(21, 52, 95); 
+            margin-right: 10px;
+        }
+
+        form label input {
+            outline: none;
+            border: none;
+            color: rgb(21, 52, 95);
+            border-bottom: solid 1px;
+            padding: 0 5px;
+            font-size: 15px;
+        }
+
+        #login {
+            color: #fff; 
+            border: none; 
+            background: linear-gradient(to right, rgb(108, 189, 239), rgb(38, 172, 235));
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="formulario" onsubmit="return validacion(event)">
+        <h2 class="titulo">Conciertos</h2>
+            <label>
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="user" placeholder="Username">
+            </label>
+            <label>
+                <i class="fa-solid fa-key"></i>
+                <input type="password" id="contraseña" placeholder="Password">
+            </label>
+            <input type="submit" id="login" value="Login">
+    </form>
+
+    <script>
+        //Pasamos como parámetro el event para evitar que el formulario se recargue automáticamente. 
+        function validacion(event) {
+            // Evitamos que el formulario se envíe antes de validar
+            event.preventDefault();
+
+            let username = document.getElementById('user').value;
+            let password = document.getElementById('contraseña').value;
+
+            if (username === "admin" && password === "1234") {
+                //Si ambos campos son correctos, se envía a la página principal
+                window.location.href = "index.html";
+            } else {
+                alert("El usuario o la contraseña son incorrectos");
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

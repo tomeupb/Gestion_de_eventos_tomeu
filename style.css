@@ -1,0 +1,115 @@
+
+*{
+    font-family:sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background: linear-gradient(to right, rgb(103, 183, 233), rgb(35, 173, 237));
+    box-sizing: border-box;
+    padding: 20px; 
+}
+
+.titulo h1 {
+    align-self: center;
+}
+
+.busqueda{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 30px;
+    background-color: #F9F9F9;
+    align-self: center;
+}
+
+.fa-solid {
+    font-size: 20px; 
+    color: rgb(3, 6, 10);
+    align-self: center; 
+    padding: 6px;
+}
+
+.formulario {
+    width: 50%;
+}
+
+.contenedor_registro {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+input {
+    width: 200px;
+    height: 25px;
+    padding: 3px;
+    border-style: none;
+    background-color: rgb(235, 233, 233);
+    border-radius: 0.2rem;
+    outline: none;
+}
+
+
+.titulo-precio {
+    display: inline-block;
+    align-self: center;
+    grid-column: 1 / 4;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+
+.registro-conciertos {
+    width: 50%;
+    padding: 20px;
+    background-color: rgb(200, 199, 199);
+}
+
+.error {
+    color: red;
+    font-size: 10px;
+}
+
+.registrar-evento {
+    background-color: rgb(35, 173, 237);
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    width: 200px;
+}
+
+#buscador {
+    background-color: #F9F9F9;
+    height: 24px;
+}
+
+.eliminar {
+    margin-top: 10px; 
+    background-color: rgb(229, 67, 30);
+    color: white;
+    font-weight: bold;
+    border-style: none;
+    height: 30px;
+    padding: 3px;
+    border-radius: 0.2rem;
+}
+
+.agenda {
+
+    margin-top: 20px;
+}
